@@ -40,19 +40,19 @@ public class NPCFriendlycitizen : NPCBase {
 		if(writers == null)
 		{
 		TypeWriter textWriter =  Object.Instantiate(TexbubbelPrefab).GetComponent<TypeWriter>();
-		textWriter.transform.position = new Vector3(-3.5f,5,0)+this.transform.position;
+		textWriter.transform.position = new Vector3(-5f,5,0)+this.transform.position;
 		textWriter.Say(dialogeText[0]);
 
 		TypeWriter textWriter2 = Object.Instantiate(TexbubbelPrefab).GetComponent<TypeWriter>();
-		textWriter2.transform.position = new Vector3(-3.5f,4,0)+this.transform.position;
+		textWriter2.transform.position = new Vector3(-5f,4,0)+this.transform.position;
 		textWriter2.Say(dialogeText[1]);
 
 		TypeWriter textWriter3 = Object.Instantiate(TexbubbelPrefab).GetComponent<TypeWriter>();
-		textWriter3.transform.position = new Vector3(-3.5f,3,0)+this.transform.position;
+		textWriter3.transform.position = new Vector3(-5f,3,0)+this.transform.position;
 		textWriter3.Say(dialogeText[2]);
 
 		TypeWriter textWriter4 = Object.Instantiate(TexbubbelPrefab).GetComponent<TypeWriter>();
-		textWriter4.transform.position = new Vector3(-3.5f,2,0)+this.transform.position;
+		textWriter4.transform.position = new Vector3(-5f,2,0)+this.transform.position;
 		textWriter4.Say(dialogeText[3]);
 
 		writers = new List<TypeWriter>();

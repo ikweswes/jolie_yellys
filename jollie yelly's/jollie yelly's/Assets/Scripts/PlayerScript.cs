@@ -1,8 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
+
+	public AudioClip jump;
+	public AudioClip Atack;
+	public AudioClip fall;
+	public AudioClip getdamage;
+	public AudioClip eat;
+
+	private AudioSource os;
 
 	private ParticleSystem ps;
     private int _moveSpeed = 4;
@@ -14,9 +24,13 @@ public class PlayerScript : MonoBehaviour {
     private int _scaleLimit = 5;
     private RaycastHit _hit;
 
-    public LayerMask _layerMask;
+    public LayerMask layerMask;
+    public Canvas deathScreen;
+    public Canvas UI;
+    public Text _uiText;
 
 	public float health = 1;
+    public int collectibles = 0;
 
 
 
@@ -35,6 +49,7 @@ public class PlayerScript : MonoBehaviour {
         _rb = GetComponent<Rigidbody>();
         _collider = GetComponent<Collider>();
 		ps = this.GetComponent<ParticleSystem>();
+		os = this.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -75,6 +90,7 @@ public class PlayerScript : MonoBehaviour {
             {
 				//_rb.AddForce(new Vector3(0, 8, 0), ForceMode.Impulse);
 				_rb.velocity = new Vector3(0,8,0);
+				os.PlayOneShot(jump);
             }
         }
         if (Input.GetKey(KeyCode.RightArrow))
@@ -88,6 +104,9 @@ public class PlayerScript : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.G))
         {
             ScaleTheSlime();
+            collectibles++;
+            _uiText.text = collectibles.ToString() + " x";
+
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -97,6 +116,14 @@ public class PlayerScript : MonoBehaviour {
         {
             Absorb();
         }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Attack();
+        }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Die();
+        }
     }
     public void ScaleTheSlime(bool increase = true)
     {
@@ -104,6 +131,7 @@ public class PlayerScript : MonoBehaviour {
         {
             if (_scaleCounter < _scaleLimit)
             {
+				os.PlayOneShot(eat);
                 transform.localScale *= 1.2f;
                 _blob.localScale *= 1.2f;
                 _scaleCounter++;
@@ -113,6 +141,7 @@ public class PlayerScript : MonoBehaviour {
         }
         else
         {
+			os.PlayOneShot(getdamage);
             if (_scaleCounter > 0)
             {
                 transform.localScale /= 1.2f;
@@ -120,6 +149,7 @@ public class PlayerScript : MonoBehaviour {
 				_scaleCounter--;
 				health -=1;
 				ps.Emit(20);
+
             }
         }
         _weight = _scaleCounter;
@@ -132,27 +162,38 @@ public class PlayerScript : MonoBehaviour {
         {
             if (col.CompareTag("Enemy"))
             {
-                ScaleTheSlime();
+				os.PlayOneShot(Atack);
+                col.GetComponent<NPCEnemyWalker>().health--;
             }
         }
     }
     private void Absorb()
     {
-        Collider[] collisions = Physics.OverlapBox(transform.position, _collider.bounds.extents * 1.5f, Quaternion.identity,_layerMask);
-
-        //for (int i = 0; i < collisions.Length; i++)
-        //{
-        //    ScaleTheSlime();
-        //}
+        Collider[] collisions = Physics.OverlapBox(transform.position, _collider.bounds.extents * 1.5f, Quaternion.identity,layerMask);
 
         foreach (Collider col in collisions)
         {
-                ScaleTheSlime();
+            if (col.CompareTag("Enemy"))
+            {
+                NPCEnemyWalker script = col.GetComponent<NPCEnemyWalker>();
+                if (script.health <= 0)
+                {
+					
+                    ScaleTheSlime();
+                    script.Die();
+                }
+            }
         }
     }
 
 	public void TakeDamage()
     {
 		ScaleTheSlime(false);
+    }
+
+    public void Die()
+    {
+        transform.parent.gameObject.SetActive(false);
+        deathScreen.gameObject.SetActive(true);
     }
 }

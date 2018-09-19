@@ -7,7 +7,7 @@ public class NPCBase : MonoBehaviour {
 	public float range;
 
 	protected string _name;
-	protected float health = 1;
+	public float health = 1;
 	protected float speed = 1;
 	protected bool friendly = true;
 	protected float attackCooldown = 1;
@@ -65,4 +65,9 @@ public class NPCBase : MonoBehaviour {
 		Attack();
 		_attacking = false;
 	}
+
+    public virtual void Die()
+    {
+        Destroy(this.gameObject);
+    }
 }

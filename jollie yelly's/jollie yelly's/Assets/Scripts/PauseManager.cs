@@ -17,19 +17,25 @@ public class PauseManager : MonoBehaviour {
         {
             if (active)
             {
-                foreach (MonoBehaviour script in _scripts)
-                {
-                    script.enabled = false;
-                    active = false;
-                }
+				Time.timeScale = 0;
+				active = false;
+
+                //foreach (MonoBehaviour script in _scripts)
+                //{
+                //    script.enabled = false;
+                //    active = false;
+                //}
             }
             else
             {
-                foreach (MonoBehaviour script in _scripts)
-                {
-                    script.enabled = true;
-                    active = true;
-                }
+				Time.timeScale = 1;
+				active = true;
+
+                //foreach (MonoBehaviour script in _scripts)
+                //{
+                //    script.enabled = true;
+                //    active = true;
+                //}
             }
         }
 	}
