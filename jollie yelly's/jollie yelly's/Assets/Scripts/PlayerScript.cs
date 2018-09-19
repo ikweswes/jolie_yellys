@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEditor.Animations;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class PlayerScript : MonoBehaviour {
 	public AudioClip fall;
 	public AudioClip getdamage;
 	public AudioClip eat;
+    public AudioClip death;
 
 	private AudioSource os;
 
@@ -23,12 +25,16 @@ public class PlayerScript : MonoBehaviour {
     private int _scaleCounter = 0;
     private int _scaleLimit = 5;
     private RaycastHit _hit;
+    private bool pressed = false;
 
     public LayerMask layerMask;
     public Canvas deathScreen;
     public Canvas UI;
     public Text _uiText;
     public GameObject[] _uiHealthParts;
+    public Animator animator;
+    public GameObject model;
+    private AnimatorController _controller;
 
 	public float health = 1;
     public int collectibles = 0;
@@ -51,12 +57,12 @@ public class PlayerScript : MonoBehaviour {
         _collider = GetComponent<Collider>();
 		ps = this.GetComponent<ParticleSystem>();
 		os = this.GetComponent<AudioSource>();
+        _controller = animator.GetComponent<AnimatorController>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         AttackControls();
-        
         for (int i = 0; i < health-1; i++)
         {
             _uiHealthParts[i].SetActive(false);
@@ -67,6 +73,10 @@ public class PlayerScript : MonoBehaviour {
             {
                 _uiHealthParts[i].SetActive(true);
             }
+        }
+        if (health <= 0)
+        {
+            Die();
         }
     }
 
@@ -84,11 +94,17 @@ public class PlayerScript : MonoBehaviour {
         {
             _rb.velocity = new Vector3(-5f, _rb.velocity.y, _rb.velocity.z);
             _rotation = Rotation.Left;
+            Vector3 EuRot = transform.rotation.eulerAngles;
+            EuRot.y = -90f;
+            model.transform.rotation = Quaternion.Euler(EuRot);
         }
         if (Input.GetKey(KeyCode.D))
         {
             _rb.velocity = new Vector3(5f, _rb.velocity.y, _rb.velocity.z);
             _rotation = Rotation.Right;
+            Vector3 EuRot = transform.rotation.eulerAngles;
+            EuRot.y = 90f;
+            model.transform.rotation = Quaternion.Euler(EuRot);
         }
     }
 
@@ -99,17 +115,23 @@ public class PlayerScript : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (grounded)
+            if (grounded && !pressed)
             {
-				//_rb.AddForce(new Vector3(0, 8, 0), ForceMode.Impulse);
-				_rb.velocity = new Vector3(0,8,0);
-				os.PlayOneShot(jump);
+                pressed = true;
+                animator.SetBool("IsJump", true);
+                StartCoroutine(Jumpy());
+                os.PlayOneShot(jump);
             }
         }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            _rb.AddForce(new Vector3(1, 0, 0), ForceMode.Impulse);
-        }
+    }
+
+    private IEnumerator Jumpy()
+    {
+        yield return new WaitForSeconds(0.2f);
+        _rb.velocity = new Vector3(0, 8, 0);
+        yield return new WaitForSeconds(0.25f);
+        animator.SetBool("IsJump", false);
+        pressed = false;
     }
 
     private void AttackControls()
@@ -148,7 +170,7 @@ public class PlayerScript : MonoBehaviour {
                 transform.localScale *= 1.2f;
                 _blob.localScale *= 1.2f;
                 _scaleCounter++;
-				health+=1;
+				health++;
 				ps.Emit(20);
             }
         }
@@ -160,16 +182,17 @@ public class PlayerScript : MonoBehaviour {
                 transform.localScale /= 1.2f;
                 _blob.localScale /= 1.2f;
 				_scaleCounter--;
-				health -=1;
 				ps.Emit(20);
-
             }
+            health--;
         }
         _weight = _scaleCounter;
     }
     private void Attack()
     {
         Collider[] collisions = Physics.OverlapBox(transform.position + new Vector3(_collider.bounds.extents.x*2*(int)_rotation,0,0), _collider.bounds.extents, Quaternion.identity);
+        animator.SetBool("IsAttack", true);
+        StartCoroutine(Tacky());
         
         foreach (Collider col in collisions)
         {
@@ -180,6 +203,13 @@ public class PlayerScript : MonoBehaviour {
             }
         }
     }
+
+    private IEnumerator Tacky()
+    {
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("IsAttack", false);
+    }
+
     private void Absorb()
     {
         Collider[] collisions = Physics.OverlapBox(transform.position, _collider.bounds.extents * 1.5f, Quaternion.identity,layerMask);
@@ -191,7 +221,6 @@ public class PlayerScript : MonoBehaviour {
                 NPCEnemyWalker script = col.GetComponent<NPCEnemyWalker>();
                 if (script.health <= 0)
                 {
-					
                     ScaleTheSlime();
                     script.Die();
                 }
@@ -206,6 +235,13 @@ public class PlayerScript : MonoBehaviour {
 
     public void Die()
     {
+        StartCoroutine(Deathy());
+        os.PlayOneShot(death);
+    }
+
+    private IEnumerator Deathy()
+    {
+        yield return new WaitForSeconds(0.5f);
         transform.parent.gameObject.SetActive(false);
         deathScreen.gameObject.SetActive(true);
     }

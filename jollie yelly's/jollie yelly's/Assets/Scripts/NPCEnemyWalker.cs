@@ -72,7 +72,4 @@ public class NPCEnemyWalker : NPCBase {
 		yield return new WaitForSeconds(1);
 		iAmAttacking = false;
 	}
-
-
-
 }
