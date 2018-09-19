@@ -6,6 +6,7 @@ public class PauseManager : MonoBehaviour {
     private object[] _scripts;
     private MonoBehaviour[] _actualScripts;
     private bool active = true;
+	public GameObject pausemenu;
     // Use this for initialization
     void Start()
     {
@@ -19,23 +20,15 @@ public class PauseManager : MonoBehaviour {
             {
 				Time.timeScale = 0;
 				active = false;
+				pausemenu.SetActive(true);
 
-                //foreach (MonoBehaviour script in _scripts)
-                //{
-                //    script.enabled = false;
-                //    active = false;
-                //}
             }
             else
             {
 				Time.timeScale = 1;
 				active = true;
+				pausemenu.SetActive(false);
 
-                //foreach (MonoBehaviour script in _scripts)
-                //{
-                //    script.enabled = true;
-                //    active = true;
-                //}
             }
         }
 	}
