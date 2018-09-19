@@ -151,10 +151,10 @@ SpringJoint:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 9712738}
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 1242074599}
   m_Anchor: {x: 0, y: 0.00012207031, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1807.49, y: 20.050003, z: -5272.551}
+  m_ConnectedAnchor: {x: -0.36624503, y: 2.6080089, z: 8.885851}
   serializedVersion: 2
   m_Spring: 10
   m_Damper: 0.2
@@ -223,6 +223,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 9712738}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &480571822 stripped
+Rigidbody:
+  m_PrefabParentObject: {fileID: 54434460968591388, guid: a63147b1986422e4ab3abced9d45544d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1092144501}
 --- !u!1 &668713073
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,10 +307,10 @@ SpringJoint:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 668713073}
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 480571822}
   m_Anchor: {x: 0, y: 0.00012207031, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1813.29, y: 22.100002, z: -5273.2007}
+  m_ConnectedAnchor: {x: 2.7169018, y: 2.329004, z: 4.1179743}
   serializedVersion: 2
   m_Spring: 10
   m_Damper: 0.2
@@ -393,10 +398,10 @@ SpringJoint:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 771200790}
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 1242074599}
   m_Anchor: {x: 0, y: 1.1102233e-16, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1806.9009, y: 35.000004, z: -5267.2}
+  m_ConnectedAnchor: {x: -0.95535636, y: 17.55801, z: 14.236437}
   serializedVersion: 2
   m_Spring: 10
   m_Damper: 1
@@ -657,6 +662,11 @@ Prefab:
       propertyPath: model
       value: 
       objectReference: {fileID: 1369729019}
+    - target: {fileID: 114103683400476034, guid: a63147b1986422e4ab3abced9d45544d,
+        type: 2}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 8300000, guid: 68f94b06178e55e4abdb0824986340bb, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a63147b1986422e4ab3abced9d45544d, type: 2}
   m_IsPrefabParent: 0
@@ -763,6 +773,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12994d1d1d823345bee4e0fdedeec3b, type: 2}
   m_IsPrefabParent: 0
+--- !u!54 &1242074599 stripped
+Rigidbody:
+  m_PrefabParentObject: {fileID: 54885086818535582, guid: a63147b1986422e4ab3abced9d45544d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1092144501}
 --- !u!1 &1369729019 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 57615deb364068b439633435f59120a0, type: 3}
@@ -915,10 +930,10 @@ SpringJoint:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1641218492}
-  m_ConnectedBody: {fileID: 0}
+  m_ConnectedBody: {fileID: 1242074599}
   m_Anchor: {x: 0, y: 1.1102233e-16, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1807.19, y: 24.950003, z: -5269.6}
+  m_ConnectedAnchor: {x: -0.66629386, y: 7.5080085, z: 11.8365345}
   serializedVersion: 2
   m_Spring: 10
   m_Damper: 0.2
