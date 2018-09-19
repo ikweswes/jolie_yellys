@@ -13,6 +13,7 @@ public class PlayerScript : MonoBehaviour {
 	public AudioClip getdamage;
 	public AudioClip eat;
     public AudioClip death;
+    public AudioClip candy;
 
 	private AudioSource os;
 
@@ -78,6 +79,7 @@ public class PlayerScript : MonoBehaviour {
         {
             Die();
         }
+        _uiText.text = collectibles.ToString() + " x";
     }
 
     private void FixedUpdate()
@@ -140,7 +142,6 @@ public class PlayerScript : MonoBehaviour {
         {
             ScaleTheSlime();
             collectibles++;
-            _uiText.text = collectibles.ToString() + " x";
 
         }
         if (Input.GetKeyDown(KeyCode.F))
@@ -244,5 +245,10 @@ public class PlayerScript : MonoBehaviour {
         yield return new WaitForSeconds(0.5f);
         transform.parent.gameObject.SetActive(false);
         deathScreen.gameObject.SetActive(true);
+    }
+
+    public void PlayCandy()
+    {
+        os.PlayOneShot(candy);
     }
 }

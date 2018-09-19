@@ -986,6 +986,7 @@ MonoBehaviour:
   getdamage: {fileID: 8300000, guid: d4d961e63f665af459d803669a7dfdde, type: 3}
   eat: {fileID: 8300000, guid: 959218ef03c2e854682d6955866cc75f, type: 3}
   death: {fileID: 8300000, guid: 68f94b06178e55e4abdb0824986340bb, type: 3}
+  candy: {fileID: 8300000, guid: 6cb36261490a96c44b938fff435730d6, type: 3}
   _weight: 1
   layerMask:
     serializedVersion: 2
@@ -1079,7 +1080,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 1 x
+  m_Text: 0 x
 --- !u!114 &114209969008878140
 MonoBehaviour:
   m_ObjectHideFlags: 1
