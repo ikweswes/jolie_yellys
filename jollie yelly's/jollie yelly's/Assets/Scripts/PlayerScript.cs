@@ -63,7 +63,10 @@ public class PlayerScript : MonoBehaviour {
         }
         for (int i = 4; i > health-2; i--)
         {
-            _uiHealthParts[i].SetActive(true);
+            if (i >= 0)
+            {
+                _uiHealthParts[i].SetActive(true);
+            }
         }
     }
 
