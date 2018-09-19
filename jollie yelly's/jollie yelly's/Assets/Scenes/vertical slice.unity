@@ -878,7 +878,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4723637552400996, guid: a005f05339919984ab8bbcab99630fd2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 17.4
+      value: 17.5
       objectReference: {fileID: 0}
     - target: {fileID: 4723637552400996, guid: a005f05339919984ab8bbcab99630fd2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -904,25 +904,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 198452024561626988, guid: a005f05339919984ab8bbcab99630fd2,
+    - target: {fileID: 114056714000034232, guid: a005f05339919984ab8bbcab99630fd2,
         type: 2}
-      propertyPath: randomSeed
-      value: 3808243
-      objectReference: {fileID: 0}
-    - target: {fileID: 198452024561626988, guid: a005f05339919984ab8bbcab99630fd2,
+      propertyPath: TexbubbelPrefab
+      value: 
+      objectReference: {fileID: 1502227024252296, guid: 247d9654a9a374444b0f4d85b2a41891,
         type: 2}
-      propertyPath: InitialModule.startSpeed.minScalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 198452024561626988, guid: a005f05339919984ab8bbcab99630fd2,
-        type: 2}
-      propertyPath: playOnAwake
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1020558486005820, guid: a005f05339919984ab8bbcab99630fd2, type: 2}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a005f05339919984ab8bbcab99630fd2, type: 2}
   m_IsPrefabParent: 0
@@ -933,64 +920,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4872285892275284, guid: 0043ee25eb2b8984390f3c96db8e9c8c, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1828.67
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4872285892275284, guid: 0043ee25eb2b8984390f3c96db8e9c8c, type: 2}
       propertyPath: m_LocalPosition.y
       value: 23.94
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4872285892275284, guid: 0043ee25eb2b8984390f3c96db8e9c8c, type: 2}
       propertyPath: m_LocalPosition.z
       value: -5281.13
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4872285892275284, guid: 0043ee25eb2b8984390f3c96db8e9c8c, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4872285892275284, guid: 0043ee25eb2b8984390f3c96db8e9c8c, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4872285892275284, guid: 0043ee25eb2b8984390f3c96db8e9c8c, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4872285892275284, guid: 0043ee25eb2b8984390f3c96db8e9c8c, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4872285892275284, guid: 0043ee25eb2b8984390f3c96db8e9c8c, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1666115857615630, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
-      propertyPath: m_Name
-      value: NPCFriendly (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
-        type: 2}
-      propertyPath: dialogeText.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
-        type: 2}
-      propertyPath: dialogeText.Array.data[1]
-      value: Help me! This thing stole
-      objectReference: {fileID: 0}
-    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
-        type: 2}
-      propertyPath: dialogeText.Array.data[2]
-      value: my suggar canes!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
-        type: 2}
-      propertyPath: dialogeText.Array.data[3]
-      value: Just beat it and eat it!
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 0043ee25eb2b8984390f3c96db8e9c8c, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1968707673 stripped
 GameObject:
@@ -1016,64 +979,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4441224273934128, guid: b13a67a1e2fc6fb408e4e49a637b6564, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1847.79
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4441224273934128, guid: b13a67a1e2fc6fb408e4e49a637b6564, type: 2}
       propertyPath: m_LocalPosition.y
       value: 16.95
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4441224273934128, guid: b13a67a1e2fc6fb408e4e49a637b6564, type: 2}
       propertyPath: m_LocalPosition.z
       value: -5281.16
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4441224273934128, guid: b13a67a1e2fc6fb408e4e49a637b6564, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4441224273934128, guid: b13a67a1e2fc6fb408e4e49a637b6564, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4441224273934128, guid: b13a67a1e2fc6fb408e4e49a637b6564, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4441224273934128, guid: b13a67a1e2fc6fb408e4e49a637b6564, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+    - target: {fileID: 4441224273934128, guid: b13a67a1e2fc6fb408e4e49a637b6564, type: 2}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
-        type: 2}
-      propertyPath: dialogeText.Array.data[0]
-      value: Hey, bob you need to save us!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
-        type: 2}
-      propertyPath: dialogeText.Array.data[1]
-      value: Evil jellys invaded the kingdom
-      objectReference: {fileID: 0}
-    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
-        type: 2}
-      propertyPath: dialogeText.Array.data[2]
-      value: With enough weight step on the
-      objectReference: {fileID: 0}
-    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
-        type: 2}
-      propertyPath: dialogeText.Array.data[3]
-      value: Pressure plate and open the door!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1666115857615630, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: b13a67a1e2fc6fb408e4e49a637b6564, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2035691816
 GameObject:
