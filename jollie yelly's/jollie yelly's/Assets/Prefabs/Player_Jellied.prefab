@@ -503,6 +503,7 @@ MonoBehaviour:
   deathScreen: {fileID: 0}
   UI: {fileID: 0}
   _uiText: {fileID: 0}
+  _uiHealthParts: []
   health: 1
   collectibles: 0
   _blob: {fileID: 4912947894272038}
