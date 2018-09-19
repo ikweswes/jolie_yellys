@@ -8,7 +8,7 @@ public class NPCEnemyWalker : NPCBase {
 
 	ParticleSystem ps;
 	Vector3 directionvector;
-	bool iAmAttacking = false;
+
 	ParticleCollisionEvent[] collisionEvents;
 
 	public override void OnStart()
@@ -52,7 +52,7 @@ public class NPCEnemyWalker : NPCBase {
 
 	public override void Attack()
 	{
-		iAmAttacking = true;
+
 		StartCoroutine(attacktime());
 		ps.Emit(20);
 
@@ -61,6 +61,7 @@ public class NPCEnemyWalker : NPCBase {
 	IEnumerator attacktime()
 	{
 		yield return new WaitForSeconds(0.3f);
+		anim.SetBool("IsAttack",false);
 		Collider[] collisions = Physics.OverlapBox(directionvector,new Vector3(1,1,1));
 		foreach(Collider col in collisions)
 		{

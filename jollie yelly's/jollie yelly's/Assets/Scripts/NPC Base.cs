@@ -15,6 +15,8 @@ public class NPCBase : MonoBehaviour {
 	protected RaycastHit right;
 	protected RaycastHit left;
 	protected PlayerScript player;
+	protected bool iAmAttacking = false;
+	protected Animator anim;
 
 	bool _attacking = false;
 	Rigidbody rigidboddy;
@@ -24,6 +26,7 @@ public class NPCBase : MonoBehaviour {
 		rigidboddy = GetComponent<Rigidbody>();
 		player = GameObject.FindWithTag("Player").GetComponent<PlayerScript>();
 		OnStart();
+		anim = this.GetComponentInChildren<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -61,7 +64,10 @@ public class NPCBase : MonoBehaviour {
 
 	public IEnumerator attacktimer()
 	{
+		
+		iAmAttacking = true;
 		yield return new WaitForSeconds(attackCooldown);
+		anim.SetBool("IsAttack",true);
 		Attack();
 		_attacking = false;
 	}
