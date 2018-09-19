@@ -28,6 +28,7 @@ public class PlayerScript : MonoBehaviour {
     public Canvas deathScreen;
     public Canvas UI;
     public Text _uiText;
+    public GameObject[] _uiHealthParts;
 
 	public float health = 1;
     public int collectibles = 0;
@@ -55,6 +56,15 @@ public class PlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         AttackControls();
+        
+        for (int i = 0; i < health-1; i++)
+        {
+            _uiHealthParts[i].SetActive(false);
+        }
+        for (int i = 4; i > health-2; i--)
+        {
+            _uiHealthParts[i].SetActive(true);
+        }
     }
 
     private void FixedUpdate()
