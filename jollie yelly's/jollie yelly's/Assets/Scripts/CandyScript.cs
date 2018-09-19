@@ -21,6 +21,7 @@ public class CandyScript : MonoBehaviour {
             PlayerScript ps = other.GetComponent<PlayerScript>();
             ps.collectibles++;
             ps.PlayCandy();
+            PlayerAlignmentManager.AddPoints(PlayerAlignmentManager.PlayerType.EXPLORER, 1);
             this.gameObject.SetActive(false);
         }
     }

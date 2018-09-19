@@ -224,6 +224,7 @@ public class PlayerScript : MonoBehaviour {
                 {
                     ScaleTheSlime();
                     script.Die();
+                    PlayerAlignmentManager.AddPoints(PlayerAlignmentManager.PlayerType.KILLER, 1);
                 }
             }
         }

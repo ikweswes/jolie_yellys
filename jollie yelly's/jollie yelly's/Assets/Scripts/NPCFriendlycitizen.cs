@@ -60,6 +60,8 @@ public class NPCFriendlycitizen : NPCBase {
 			writers.Add(textWriter2);
 			writers.Add(textWriter3);
 			writers.Add(textWriter4);
+
+            PlayerAlignmentManager.AddPoints(PlayerAlignmentManager.PlayerType.SOCIALIZER, 1);
 		}
 		else
 		{
