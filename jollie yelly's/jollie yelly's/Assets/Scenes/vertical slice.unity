@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -572,7 +572,7 @@ RectTransform:
   - {fileID: 9712739}
   - {fileID: 668713074}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -616,7 +616,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4679445799550642, guid: f12994d1d1d823345bee4e0fdedeec3b, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1352799198743554, guid: f12994d1d1d823345bee4e0fdedeec3b, type: 2}
       propertyPath: m_Name
@@ -753,7 +753,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1641218492
 GameObject:
@@ -874,7 +874,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4723637552400996, guid: a005f05339919984ab8bbcab99630fd2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1853.91
+      value: 1837.27
       objectReference: {fileID: 0}
     - target: {fileID: 4723637552400996, guid: a005f05339919984ab8bbcab99630fd2, type: 2}
       propertyPath: m_LocalPosition.y
@@ -902,7 +902,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4723637552400996, guid: a005f05339919984ab8bbcab99630fd2, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 198452024561626988, guid: a005f05339919984ab8bbcab99630fd2,
         type: 2}
@@ -925,6 +925,72 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a005f05339919984ab8bbcab99630fd2, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1912273261
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1828.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 23.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -5281.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1666115857615630, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
+      propertyPath: m_Name
+      value: NPCFriendly (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
+        type: 2}
+      propertyPath: dialogeText.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
+        type: 2}
+      propertyPath: dialogeText.Array.data[1]
+      value: Help me! This thing stole
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
+        type: 2}
+      propertyPath: dialogeText.Array.data[2]
+      value: my suggar canes!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
+        type: 2}
+      propertyPath: dialogeText.Array.data[3]
+      value: Just beat it and eat it!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1968707673 stripped
 GameObject:
@@ -952,11 +1018,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1835.04
+      value: 1847.79
       objectReference: {fileID: 0}
     - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 17.120392
+      value: 16.95
       objectReference: {fileID: 0}
     - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
       propertyPath: m_LocalPosition.z
@@ -980,27 +1046,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4938779366093780, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
         type: 2}
       propertyPath: dialogeText.Array.data[0]
-      value: he bob you need to save us
+      value: Hey, bob you need to save us!
       objectReference: {fileID: 0}
     - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
         type: 2}
       propertyPath: dialogeText.Array.data[1]
-      value: evil jellys invaded the kingdom
+      value: Evil jellys invaded the kingdom
       objectReference: {fileID: 0}
     - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
         type: 2}
       propertyPath: dialogeText.Array.data[2]
-      value: eat them with H and gain mass
+      value: With enough weight step on the
       objectReference: {fileID: 0}
     - target: {fileID: 114752970110189572, guid: 9ff2381587d0d934980c22c59d228721,
         type: 2}
       propertyPath: dialogeText.Array.data[3]
-      value: numenter to close dialogbox
+      value: Pressure plate and open the door!
       objectReference: {fileID: 0}
     - target: {fileID: 1666115857615630, guid: 9ff2381587d0d934980c22c59d228721, type: 2}
       propertyPath: m_TagString
