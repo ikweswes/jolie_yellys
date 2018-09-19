@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class NPCEnemyWalker : NPCBase {
 
+	public AudioClip atacksound;
+	AudioSource ac;
 
 	ParticleSystem ps;
 	Vector3 directionvector;
@@ -22,6 +24,7 @@ public class NPCEnemyWalker : NPCBase {
 		ps = this.GetComponentInChildren<ParticleSystem>();
 		ps.shape.rotation.Set(0,90,0);   
 		collisionEvents = new ParticleCollisionEvent[8];
+		ac = GetComponent<AudioSource>();
 	}
 
 	public override void DuringUpdate(){
@@ -54,6 +57,7 @@ public class NPCEnemyWalker : NPCBase {
 	{
 
 		StartCoroutine(attacktime());
+		ac.PlayOneShot(atacksound);
 		ps.Emit(20);
 
 	}
