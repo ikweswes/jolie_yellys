@@ -7,7 +7,7 @@ public class NPCBase : MonoBehaviour {
 	public float range;
 
 	protected string _name;
-    public float health;
+	public float health = PlayerPrefs.GetInt("enemyHealth",0);
 	protected float speed = 1;
 	protected bool friendly = true;
 	protected float attackCooldown = 1;

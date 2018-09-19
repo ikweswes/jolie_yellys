@@ -14,7 +14,6 @@ public class NPCFriendlycitizen : NPCBase {
 	// Use this for initialization
 	void Start () {
 		friendly = true;
-		health = PlayerPrefs.GetInt("enemyHealth",0);
 		attackCooldown = 2;
 		speed = 7;
 		damageAbleToDeal = 1;
