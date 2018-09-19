@@ -506,7 +506,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1598638293606320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1804.1, y: 15.4, z: -5283.7}
+  m_LocalPosition: {x: 1923.6367, y: 24673.787, z: -81046.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4875583587904740}
@@ -1516,7 +1516,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000034093857, y: -0.00000047683716, z: 0.00010919571}
+  m_ConnectedAnchor: {x: -0.000034093857, y: 0.0009741783, z: 0.0020623207}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -4976,7 +4976,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: f7a458713eed7db499cc7bfb1b657b08, type: 2}
+  - {fileID: 2100000, guid: 2ad210ec5626625429c214d917de23f2, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
