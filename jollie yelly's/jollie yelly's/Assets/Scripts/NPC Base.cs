@@ -65,9 +65,10 @@ public class NPCBase : MonoBehaviour {
 	public IEnumerator attacktimer()
 	{
 		
-		iAmAttacking = true;
+
 		yield return new WaitForSeconds(attackCooldown);
 		anim.SetBool("IsAttack",true);
+		iAmAttacking = true;
 		Attack();
 		_attacking = false;
 	}
