@@ -7,7 +7,7 @@ public class NPCBase : MonoBehaviour {
 	public float range;
 
 	protected string _name;
-	public float health = 1;
+    public float health;
 	protected float speed = 1;
 	protected bool friendly = true;
 	protected float attackCooldown = 1;
