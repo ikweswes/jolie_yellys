@@ -58,7 +58,7 @@ public class PlayerScript : MonoBehaviour {
         _collider = GetComponent<Collider>();
 		ps = this.GetComponent<ParticleSystem>();
 		os = this.GetComponent<AudioSource>();
-        _controller = animator.GetComponent<AnimatorController>();
+		_controller = animator.GetComponent<AnimatorController>();
 	}
 	
 	// Update is called once per frame
