@@ -4,10 +4,10 @@ using UnityEngine;
 
 public static class PlayerAlignmentManager
 {
-    public static float Killer = 0;
-    public static float Explorer = 0;
-    public static float Socializer = 0;
-    public static float Achiever = 0;
+    static float Killer = 0;
+    static float Explorer = 0;
+    static float Socializer = 0;
+    static float Achiever = 0;
 
     public enum PlayerType
     {
