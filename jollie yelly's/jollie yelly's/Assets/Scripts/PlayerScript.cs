@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEditor.Animations;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -34,6 +35,7 @@ public class PlayerScript : MonoBehaviour {
     public GameObject[] _uiHealthParts;
     public Animator animator;
     public GameObject model;
+    private AnimatorController _controller;
 
 	public float health = 1;
     public int collectibles = 0;
@@ -56,6 +58,7 @@ public class PlayerScript : MonoBehaviour {
         _collider = GetComponent<Collider>();
 		ps = this.GetComponent<ParticleSystem>();
 		os = this.GetComponent<AudioSource>();
+		_controller = animator.GetComponent<AnimatorController>();
 	}
 	
 	// Update is called once per frame
