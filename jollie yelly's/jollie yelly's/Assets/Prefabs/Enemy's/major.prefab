@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 54728465505546232}
   - component: {fileID: 114839713722337968}
   - component: {fileID: 114926353550344666}
+  - component: {fileID: 82925606130315014}
   m_Layer: 8
   m_Name: major
   m_TagString: Enemy
@@ -378,6 +379,87 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!82 &82925606130315014
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1257520126030954}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243665947600989040, guid: 3cc751392de62514db3c4ed9476c2ed7,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95448395668667006
 Animator:
   serializedVersion: 3
@@ -408,6 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 5
   health: 0
+  atacksound: {fileID: 8300000, guid: d8da8f79679d9014b8c9a1886f6ebeb9, type: 3}
 --- !u!114 &114926353550344666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -421,6 +504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   range: 5
   health: 0
+  talking: {fileID: 8300000, guid: d8da8f79679d9014b8c9a1886f6ebeb9, type: 3}
   dialogeText:
   - Hey, bob you need to save us!
   - Evil jellys invaded the kingdom

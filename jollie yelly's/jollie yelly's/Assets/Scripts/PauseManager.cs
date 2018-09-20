@@ -6,6 +6,8 @@ public class PauseManager : MonoBehaviour {
     private object[] _scripts;
     private MonoBehaviour[] _actualScripts;
     private bool active = true;
+	public GameObject pausemenu;
+	public bool _continue = false;
     // Use this for initialization
     void Start()
     {
@@ -13,29 +15,21 @@ public class PauseManager : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.P))
+		if (Input.GetKeyDown(KeyCode.P )||_continue == true)
         {
+			_continue = false;
             if (active)
             {
 				Time.timeScale = 0;
 				active = false;
-
-                //foreach (MonoBehaviour script in _scripts)
-                //{
-                //    script.enabled = false;
-                //    active = false;
-                //}
+				pausemenu.SetActive(true);
             }
             else
             {
 				Time.timeScale = 1;
 				active = true;
+				pausemenu.SetActive(false);
 
-                //foreach (MonoBehaviour script in _scripts)
-                //{
-                //    script.enabled = true;
-                //    active = true;
-                //}
             }
         }
 	}

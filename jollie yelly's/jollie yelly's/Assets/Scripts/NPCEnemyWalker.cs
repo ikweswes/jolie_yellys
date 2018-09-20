@@ -16,7 +16,6 @@ public class NPCEnemyWalker : NPCBase {
 	public override void OnStart()
 	{
 		_name = "Walker";
-		health = PlayerPrefs.GetInt("enemyHealth",0);
 		friendly = false;
 		attackCooldown = 3f;
 		speed = 5;

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NPCFriendlycitizen : NPCBase {
 
+	public AudioClip talking;
+	AudioSource ac;
 
 	public string[] dialogeText;
 	public GameObject TexbubbelPrefab;
@@ -13,8 +15,8 @@ public class NPCFriendlycitizen : NPCBase {
 
 	// Use this for initialization
 	void Start () {
+		ac = GetComponent<AudioSource>();
 		friendly = true;
-		health = PlayerPrefs.GetInt("enemyHealth",0);
 		attackCooldown = 2;
 		speed = 7;
 		damageAbleToDeal = 1;
@@ -39,6 +41,7 @@ public class NPCFriendlycitizen : NPCBase {
 			
 		if(writers == null)
 		{
+			ac.PlayOneShot(talking);
 		TypeWriter textWriter =  Object.Instantiate(TexbubbelPrefab).GetComponent<TypeWriter>();
 		textWriter.transform.position = new Vector3(-5f,5,0)+this.transform.position;
 		textWriter.Say(dialogeText[0]);

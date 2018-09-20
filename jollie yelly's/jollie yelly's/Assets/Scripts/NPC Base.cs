@@ -7,7 +7,7 @@ public class NPCBase : MonoBehaviour {
 	public float range;
 
 	protected string _name;
-    public float health;
+	public float health;
 	protected float speed = 1;
 	protected bool friendly = true;
 	protected float attackCooldown = 1;
@@ -23,6 +23,7 @@ public class NPCBase : MonoBehaviour {
 
 
 	void Start () {
+		health  = PlayerPrefs.GetInt("enemyHealth",0);
 		rigidboddy = GetComponent<Rigidbody>();
 		player = GameObject.FindWithTag("Player").GetComponent<PlayerScript>();
 		OnStart();
@@ -65,9 +66,10 @@ public class NPCBase : MonoBehaviour {
 	public IEnumerator attacktimer()
 	{
 		
-		iAmAttacking = true;
+
 		yield return new WaitForSeconds(attackCooldown);
 		anim.SetBool("IsAttack",true);
+		iAmAttacking = true;
 		Attack();
 		_attacking = false;
 	}
