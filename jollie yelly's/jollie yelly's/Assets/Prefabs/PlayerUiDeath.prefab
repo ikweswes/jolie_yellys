@@ -506,7 +506,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1598638293606320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1923.6367, y: 24673.787, z: -81046.27}
+  m_LocalPosition: {x: 1804.1, y: 15.4, z: -5283.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4875583587904740}
@@ -565,7 +565,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1074764018351634}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.34, y: 6.39, z: -5.588}
+  m_LocalPosition: {x: 3.34, y: 6.39, z: -5.779}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4764811371270940}
@@ -987,7 +987,7 @@ MonoBehaviour:
   eat: {fileID: 8300000, guid: 959218ef03c2e854682d6955866cc75f, type: 3}
   death: {fileID: 8300000, guid: 68f94b06178e55e4abdb0824986340bb, type: 3}
   candy: {fileID: 8300000, guid: 6cb36261490a96c44b938fff435730d6, type: 3}
-  _weight: 1
+  _weight: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -1516,7 +1516,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.000034093857, y: 0.0009741783, z: 0.0020623207}
+  m_ConnectedAnchor: {x: -0.000034093857, y: -0.00000047683716, z: 0.0001912117}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -1660,7 +1660,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 923903789
+  randomSeed: 1547254316
   InitialModule:
     serializedVersion: 3
     enabled: 1

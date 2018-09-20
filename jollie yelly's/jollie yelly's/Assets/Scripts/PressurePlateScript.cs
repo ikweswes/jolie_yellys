@@ -6,8 +6,10 @@ public class PressurePlateScript : MonoBehaviour {
 
 	public AudioClip pressure;
 	private AudioSource ac;
-    public int weightRequirement = 5;
+    public int weightRequirement;
     public GameObject player;
+    public GameObject linkedObject;
+    public LayerMask layer;
     private RaycastHit _hit;
     private PlayerScript _script;
 	private bool iampressed = false;
@@ -21,23 +23,20 @@ public class PressurePlateScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Physics.Raycast(transform.position, Vector3.up, out _hit, 0.5f))
+        if (Physics.Raycast(transform.position, Vector3.up, out _hit, 1f,layer))
         {
             if (_hit.collider.CompareTag("Player"))
             {
+                print("222");
                 if (_script._weight >= weightRequirement)
                 {
 					if(!iampressed)
 					{
-					ac.PlayOneShot(pressure);
+                        print("111");
+                        ac.PlayOneShot(pressure);
 						iampressed = true;
+                        linkedObject.SendMessage("Activate");
 					}
-                    //DO WHATEVER
-
-                    //for (int i = weightRequirement - 1; i > 0; i--)
-                    //{
-                    //    _script.ScaleTheSlime(false);
-                    //}
                 }
             }
         }
