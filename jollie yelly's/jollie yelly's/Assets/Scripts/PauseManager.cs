@@ -7,6 +7,7 @@ public class PauseManager : MonoBehaviour {
     private MonoBehaviour[] _actualScripts;
     private bool active = true;
 	public GameObject pausemenu;
+	public GameObject selector;
     // Use this for initialization
     void Start()
     {
@@ -21,6 +22,7 @@ public class PauseManager : MonoBehaviour {
 				Time.timeScale = 0;
 				active = false;
 				pausemenu.SetActive(true);
+				selector.SetActive(true);
 
             }
             else
@@ -28,6 +30,7 @@ public class PauseManager : MonoBehaviour {
 				Time.timeScale = 1;
 				active = true;
 				pausemenu.SetActive(false);
+				selector.SetActive(false);
 
             }
         }

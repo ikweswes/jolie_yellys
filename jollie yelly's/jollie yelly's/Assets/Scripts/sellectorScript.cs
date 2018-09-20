@@ -12,6 +12,7 @@ public class sellectorScript : MonoBehaviour {
 	// Update is called once per frame
 	void Start(){
 		index = 0;
+		setposition();
 	}
 
 	void Update () {
